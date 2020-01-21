@@ -7,9 +7,8 @@ RSpec.describe Users::UpdateUser do
     {
       user: {
         name: Faker::Name.first_name,
-        email: Faker::Name.first_name,
-        reset_password_token: Faker::Name.first_name,
-        date_of_birth: Faker::Name.first_name
+        email: Faker::Internet.email,
+        date_of_birth: Faker::Date.birthday
       }
     }
   end

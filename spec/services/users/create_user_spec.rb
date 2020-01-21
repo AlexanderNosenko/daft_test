@@ -6,9 +6,8 @@ RSpec.describe ::Users::CreateUser do
     {
       user: {
         name: Faker::Name.first_name,
-        email: Faker::Name.first_name,
-        reset_password_token: Faker::Name.first_name,
-        date_of_birth: Faker::Name.first_name
+        email: Faker::Internet.email,
+        date_of_birth: Faker::Date.birthday
       }
     }
   end
@@ -36,13 +35,7 @@ RSpec.describe ::Users::CreateUser do
       let(:params) do
         {
           user: {
-            id: '',
-            name: '',
-            email: '',
-            reset_password_token: '',
-            date_of_birth: '',
-            created_at: '',
-            updated_at: ''
+            name: ''
           }
         }
       end
