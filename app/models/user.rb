@@ -5,12 +5,8 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates :date_of_birth, presence: true
 
-  # def birthday?
-  #  date_of_birth == Date.today
-  # end
-  #
   # def send_registration_email
-  #  UserMailer.registration(self).deliver_now
+  # UserMailer.registration(self).deliver_now
   # end
 
 end
