@@ -2,10 +2,6 @@ require 'pundit/matchers'
 require 'sidekiq/testing'
 require 'database_cleaner'
 
-Pundit::Matchers.configure do |config|
-  config.user_alias = :session
-end
-
 Sidekiq::Testing.fake!
 
 Dir[File.expand_path('descriptors/**/*.rb', __dir__)].each { |f| require f }

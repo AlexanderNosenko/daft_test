@@ -23,6 +23,7 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
 
   config.include FactoryBot::Syntax::Methods
+  config.include ModuleScaffold::SpecSupport::SerializerHelpers, type: :serializer
   # config.include AssertionHelpers
   # config.include AuthenticationHelper, type: :integration
 
