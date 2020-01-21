@@ -31,3 +31,7 @@
 
 en:
   hello: "Hello world"
+  emails:
+    user:
+      registration:
+        body: 'You have successfully registered yourself in DaftCode'

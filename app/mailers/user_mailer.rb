@@ -1,7 +1,8 @@
 class UserMailer < ApplicationMailer
 
-  def registration(user)
-    @user = user
+  def registration(user_id)
+    @user = User.find(user_id)
+
     mail(to: @user.email, subject: 'Welcome ' + @user.name + '!')
   end
 

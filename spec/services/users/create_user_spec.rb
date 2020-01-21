@@ -29,6 +29,12 @@ RSpec.describe ::Users::CreateUser do
           expect(result[key]).to eq value
         end
       end
+
+      it 'sends a registration email' do
+        perform_enqueued_jobs do
+          expect { subject }.to change { UserMailer.deliveries.count }.by(1)
+        end
+      end
     end
 
     context 'with invalid params' do
@@ -50,6 +56,12 @@ RSpec.describe ::Users::CreateUser do
         expect(service.success?).to eq false
         expect(service.result).to eq nil
         expect(service.error).to be_a ModuleScaffold::Errors::ValidationError
+      end
+
+      it 'does not send a registration email' do
+        perform_enqueued_jobs do
+          expect { subject }.to change { UserMailer.deliveries.count }.by(0)
+        end
       end
     end
   end

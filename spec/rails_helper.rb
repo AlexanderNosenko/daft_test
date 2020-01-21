@@ -24,16 +24,7 @@ RSpec.configure do |config|
 
   config.include FactoryBot::Syntax::Methods
   config.include ModuleScaffold::SpecSupport::SerializerHelpers, type: :serializer
-  # config.include AssertionHelpers
-  # config.include AuthenticationHelper, type: :integration
-
-  # config.include ApplicationHelper, type: :request
-  # config.include ApplicationHelper, type: :controller
-  # config.include ApplicationHelper, type: :service
-
-  # config.include SerializerHelper, type: :serializer
-  # config.extend RswagHelper, rswag: true
-  # config.include PolicyHelper, policy: true
+  config.include ActiveJob::TestHelper
 
   config.after do |example|
     if example.metadata[:rswag]
