@@ -7,16 +7,16 @@ default: &default
 
 development:
   <<: *default
-  database: passionate_task_development
+  database: daft_task_development
 
 test:
   <<: *default
-  database: passionate_task_test
+  database: daft_task_test
 
 staging:
   <<: *default
-  database: <%= ENV["POSTGRES_NAME"] || 'passionate_task_staging' %>
+  database: <%= ENV["POSTGRES_NAME"] || 'daft_task_staging' %>
 
 production:
   <<: *default
-  database: <%= ENV["POSTGRES_NAME"] || 'passionate_task_production' %>
+  database: <%= ENV["POSTGRES_NAME"] || 'daft_task_production' %>

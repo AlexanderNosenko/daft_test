@@ -5,7 +5,7 @@
   - mailers
 
   # Related to config.active_job.queue_name_prefix
-  - passionate_task_development_default
-  - passionate_task_development_mailers
-  - passionate_task_test_default
-  - passionate_task_test_mailers
+  - daft_task_development_default
+  - daft_task_development_mailers
+  - daft_task_test_default
+  - daft_task_test_mailers
