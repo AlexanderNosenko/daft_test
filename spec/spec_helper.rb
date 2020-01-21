@@ -1,6 +1,5 @@
 require 'pundit/matchers'
 require 'sidekiq/testing'
-require "test_prof/recipes/rspec/let_it_be"
 require 'database_cleaner'
 
 Pundit::Matchers.configure do |config|
@@ -8,6 +7,8 @@ Pundit::Matchers.configure do |config|
 end
 
 Sidekiq::Testing.fake!
+
+Dir[File.expand_path('descriptors/**/*.rb', __dir__)].each { |f| require f }
 
 RSpec.configure do |config|
   # Stop processing specs upon first failure

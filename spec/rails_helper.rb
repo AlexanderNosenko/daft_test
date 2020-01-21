@@ -4,7 +4,8 @@ ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
-
+require "test_prof/recipes/rspec/let_it_be"
+require 'module_scaffold'
 # For multiple reasons better include in specific files
 # Dir[Rails.root.join('spec', 'support', '**', '*.rb')].each { |f| require f }
 
