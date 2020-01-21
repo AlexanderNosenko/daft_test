@@ -57,7 +57,7 @@ RSpec.describe 'Users', type: :request, rswag: true do
         schema(ModuleScaffold::Descriptors::ValidationErrorDescriptor.schema)
 
         run_test! do
-          expect_json('errors.?.source.pointer', '/data/attributes/id')
+          expect_json('errors.?.source.pointer', '/data/attributes/name')
           expect_json('errors.?.detail', 'blank')
         end
       end
@@ -113,7 +113,7 @@ RSpec.describe 'Users', type: :request, rswag: true do
         schema(ModuleScaffold::Descriptors::ValidationErrorDescriptor.schema)
 
         run_test! do
-          expect_json('errors.?.source.pointer', '/data/attributes/id')
+          expect_json('errors.?.source.pointer', '/data/attributes/name')
           expect_json('errors.?.detail', 'blank')
         end
       end
