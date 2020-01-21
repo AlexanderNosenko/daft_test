@@ -4,8 +4,7 @@ class UsersController < BaseController
     authorize(::User)
 
     render_success(
-      users,
-      meta: { total: users.count }
+      users
     )
   end
 

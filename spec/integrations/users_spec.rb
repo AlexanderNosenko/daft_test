@@ -52,7 +52,7 @@ RSpec.describe 'Users', type: :request, rswag: true do
       end
 
       response 422, :unprocessable_entity do
-        before { params[:user][:id] = '' }
+        before { params[:user][:name] = '' }
 
         schema(ModuleScaffold::Descriptors::ValidationErrorDescriptor.schema)
 
@@ -108,7 +108,7 @@ RSpec.describe 'Users', type: :request, rswag: true do
       end
 
       response 422, :unprocessable_entity do
-        before { params[:user][:id] = '' }
+        before { params[:user][:name] = '' }
 
         schema(ModuleScaffold::Descriptors::ValidationErrorDescriptor.schema)
 

@@ -15,18 +15,14 @@ RSpec.describe ::UserSerializer, type: :serializer do
 
     it 'returns correct attributes' do
       expect_correct_attributes([
-        :id,
         :name,
         :email,
-        :reset_password_token,
-        :date_of_birth,
-        :created_at,
-        :updated_at
+        :date_of_birth
       ])
     end
 
     it 'returns none relationships' do
-      expect_correct_relationships([])
+      expect_correct_relationships(nil)
     end
   end
 end
