@@ -1,6 +1,6 @@
 #!/bin/bash
 rm swagger/public/swagger.json # remove old swagger.json
-bundle exec rspec spec/integration/ --format Rswag::Specs::SwaggerFormatter # generate OpenApi 2.0
+bundle exec rspec spec/rswag/ --format Rswag::Specs::SwaggerFormatter # generate OpenApi 2.0
 yarn run convert_swagger_to_openapi # convert OpenApi 2.0 -> 3.0
 rm swagger/v2/swagger.json # remove temp swagger file
 mv ./swagger/v2/swagger_openapi3.json ./swagger/public/swagger.json # move OpenApi 3.0 swagger file to public

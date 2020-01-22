@@ -23,3 +23,7 @@ foo@bar:~$ gem install foreman
 ```console
 foo@bar:~$ foreman start -f Procfile.dev
 ```
+### Swagger Documentation
+```console
+foo@bar:~$ yarn && ./generate_api_docs.sh
+```
